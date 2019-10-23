@@ -1,0 +1,2 @@
+# linkedlistc
+oaoaoaooaoa linklinklinklinklinlkllinlknlinlknlinlknknknn
