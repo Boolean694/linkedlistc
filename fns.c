@@ -11,6 +11,10 @@ void printnode(struct node *no) {
 }
 
 void print_list(struct node *no) {
+  if(no == NULL) {
+    printf("[]");
+  }
+  else {
   struct node *p = no;
   printf("[");
   while((*p).next != NULL) {
@@ -19,6 +23,7 @@ void print_list(struct node *no) {
   }
   printf("%d", (*p).i);
   printf("]");
+  }
 }
 
 struct node * insert_front(struct node *no, int in) {
