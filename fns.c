@@ -35,8 +35,13 @@ struct node * insert_front(struct node *no, int in) {
   struct node *pr = nnf;
   return pr;
 }
-/*
-struct node * free_list(struct node *no) {
 
+struct node * free_list(struct node *no) {
+  while(no != NULL) {
+    struct node *fr = no;
+    no = no->next;
+    fr->i = 0;
+    free(fr);
+  }
+  return NULL;
 }
-*/

@@ -16,6 +16,12 @@ int main() {
     begin = insert_front(begin, q);
   }
   print_list(begin);
+  printf("\n");
+
+  printf("Freeing list:\n");
+  begin = free_list(begin);
+  printf("Freed!\n");
+  print_list(begin);
 
   return 0;
 }
