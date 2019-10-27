@@ -18,6 +18,19 @@ int main() {
   print_list(begin);
   printf("\n");
 
+  printf("Removing 6:\n");
+  begin = remove_node(begin, 6);
+  print_list(begin);
+  printf("\n");
+  printf("Removing 10:\n");
+  begin = remove_node(begin, 10);
+  print_list(begin);
+  printf("\n");
+  printf("Removing 1:\n");
+  begin = remove_node(begin, 1);
+  print_list(begin);
+  printf("\n");
+
   printf("Freeing list:\n");
   begin = free_list(begin);
   printf("Freed!\n");

@@ -45,3 +45,24 @@ struct node * free_list(struct node *no) {
   }
   return NULL;
 }
+
+struct node * remove_node(struct node *no, int data) {
+  if(no->i == data) {
+    struct node *del = no;
+    no = no->next;
+    free(del);
+    return no;
+  }
+  else {
+    struct node *retfro = no;
+    struct node *back;
+    while(no != NULL && no->i != data) {
+      back = no;
+      no = no->next;
+    }
+    if(no->i == data) {
+      back->next = no->next;
+    }
+    return retfro;
+  }
+}
